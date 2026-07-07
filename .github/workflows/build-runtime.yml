@@ -2,19 +2,6 @@ name: Build Runtime Image
 
 on:
   workflow_dispatch:
-  pull_request:
-    branches: [main, master]
-    types: [opened, synchronize, reopened]
-    paths:
-      - "runtime/**"
-      - ".github/workflows/build-runtime.yml"
-      - "!runtime/*.md"
-  push:
-    branches: [main, master]
-    paths:
-      - "runtime/**"
-      - ".github/workflows/build-runtime.yml"
-      - "!runtime/*.md"
 
 permissions:
   pull-requests: write
