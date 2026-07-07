@@ -1,229 +1,169 @@
-# Fulling - AI-Powered Full-Stack Development Platform
+# Fulling
 
 <div align="center">
-  <img src="https://img.shields.io/badge/v2.0.0--dev-yellow?style=for-the-badge" alt="Version 2.0.0-dev"/>
-  <img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js" alt="Next.js"/>
-  <img src="https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript" alt="TypeScript"/>
-  <img src="https://img.shields.io/badge/PostgreSQL-14-blue?style=for-the-badge&logo=postgresql" alt="PostgreSQL"/>
-  <img src="https://img.shields.io/badge/Kubernetes-1.28-326ce5?style=for-the-badge&logo=kubernetes" alt="Kubernetes"/>
-  <img src="https://img.shields.io/badge/Claude_Code-AI-purple?style=for-the-badge" alt="Claude Code"/>
+  <img src="./public/icon-transparent.svg" alt="Fulling" width="72" height="72" />
+
+  <p><strong>Package AI workspaces once. Share them with people who just need the AI to work.</strong></p>
+
+  <p>
+    <img src="https://img.shields.io/badge/v3.0-workspace_delivery-7cc4a4?style=for-the-badge" alt="Fulling v3.0 workspace delivery" />
+    <img src="https://img.shields.io/badge/v2.0.0-released-blue?style=for-the-badge" alt="Fulling v2.0.0 released" />
+    <img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js" alt="Next.js 16" />
+    <img src="https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript" alt="TypeScript 5" />
+  </p>
+
+  <p>
+    <a href="#overview">Overview</a> •
+    <a href="#workspace-model">Workspace model</a> •
+    <a href="#how-it-works">How it works</a> •
+    <a href="#project-status">Project status</a> •
+    <a href="#local-development">Local development</a>
+  </p>
 </div>
-
-> [!CAUTION]
-> **v2 development in progress**
->
-> We're rearchitecting Fulling as an Agentic app. Breaking changes expected.
->
-> For stable, use [`v1.0.0`](https://github.com/FullAgent/fulling/tree/v1.0.0).
-
-## What is Fulling?
-
-**Fulling lets you focus on coding. AI handles everything else.**
-
-Import your project from GitHub or start fresh. Claude Code is your AI pair programmer—it writes code, runs tests, manages databases, and deploys to production. All in a browser-based development environment.
-
-**Configuration-driven development.** Need Stripe? OAuth? Just enter your API keys in project settings. Services become instantly available—no SDK setup, no environment variables, no integration code. Claude Code reads your config and implements the features for you.
 
 ## Overview
 
-Fulling provides a sandboxed environment with Claude Code and PostgreSQL — everything you need to vibe code full-stack apps.
+Fulling is a product for creating ready-to-use AI workspaces.
 
-Fulling automatically sets up everything you need, ready in a minute:
-- AI pair programmer (Claude Code)
-- Full-stack development environment
-- Dedicated database (PostgreSQL)
-- Web terminal & file manager
-- Live HTTPS domains
+It is built around a practical problem: many professionals can benefit from AI,
+but they do not want to configure skills, prompts, memory, scripts, integrations,
+or runtime settings. Fulling gives creators a place to assemble those pieces,
+then share the finished workspace with the person who needs it.
 
-![fulling-frame](https://github.com/user-attachments/assets/5b535c93-8bf0-4014-8984-ef835d548dbc)
+> [!NOTE]
+> Fulling v3.0 centers on workspace delivery: the setup work happens once, and
+> the recipient opens a prepared AI workspace instead of learning the AI stack.
 
-![fulling-desktop](https://github.com/user-attachments/assets/91b40df8-79de-4922-8627-822b98768915)
+## Why Fulling?
 
-### Features
+Most AI tools start with an empty chat box. That works for people who already
+know how to prompt, configure tools, and judge the outputs. It breaks down when
+the user is a domain expert who simply needs help with real work.
 
-- **AI Pair Programmer** - Claude Code is pre-installed and ready. Describe what you want, it writes the code.
+Fulling turns that setup into a deliverable:
 
-- **Zero Setup** - Full-stack environment with database, terminal, and file manager. All pre-configured, ready in seconds.
+- a building designer receives a workspace with drawing review workflows,
+  project references, and report templates
+- a consultant receives a workspace with client materials, analysis scripts,
+  and reusable delivery formats
+- a team receives a workspace with shared context, approved tools, and repeatable
+  operating routines
 
-- **Web Terminal** - Full Linux terminal in your browser. Run commands, install packages, debug—everything you'd do locally.
+The recipient uses the workspace. The creator owns the configuration.
 
-- **File Manager** - Drag & drop files, edit code in browser. Large file support built-in.
+## Workspace Model
 
-- **Live Domains** - Your app gets HTTPS URLs instantly. No port forwarding, no ngrok. Just run and share.
+An AI workspace combines the context, capabilities, and runtime needed for a
+specific person or job.
 
-- **Configuration-Driven** - Add Stripe, OAuth, or any service by entering API keys in settings. Claude Code reads your config and implements the integration for you.
+| Part | Purpose |
+| --- | --- |
+| Mission | The job this AI workspace exists to help with |
+| Knowledge | Files, notes, examples, references, and domain material |
+| Memory | Durable context that can evolve over time |
+| Skills | Named capabilities the AI can use |
+| Scripts | Repeatable actions for work that needs reliability |
+| Runtime | A place where tools, code, and automation can run |
+| Sharing | A way to hand the configured workspace to another user |
 
-- **GitHub Integration** - Import repos, push changes, version control. Works like you'd expect.
+## How It Works
 
-- **One-Click Deploy** - From sandbox to production in one click. No YAML, no CI/CD pipelines.
+```text
+Create
+  -> choose who the workspace is for
+  -> describe the work it supports
+  -> add knowledge and files
+  -> configure skills, scripts, memory, and runtime
+  -> test the workspace
+  -> share it with the recipient
 
-## Built With
+Use
+  -> open the prepared workspace
+  -> ask for work through task-focused entry points
+  -> review outputs, files, and approvals
+  -> keep using the same workspace as context grows
+```
 
-- **Frontend**: Next.js, React, TypeScript
-- **Backend**: Node.js, PostgreSQL
-- **Infrastructure**: Kubernetes
+## What Fulling Is Not
 
-For technical details, see [Architecture Documentation](./docs/architecture.md).
+Fulling is not a prompt marketplace, generic chatbot builder, Kubernetes UI, or
+DevOps control panel. Those pieces can exist behind the scenes, but the product
+is organized around prepared AI workspaces.
 
-## Installation
+## Project Status
+
+Fulling v3.0 is the active product direction. The current repository is being
+realigned around the workspace delivery model described above.
+
+The previous v2.0.0 release is available at
+[Fulling v2.0.0](https://github.com/FullAgent/fulling/releases/tag/v2.0.0).
+
+Active branches:
+
+- `v3.0` for the current product direction
+- `release/2.0` for v2 maintenance
+- `main` is not the target branch for v3 work
+
+## Tech Stack
+
+| Area | Stack |
+| --- | --- |
+| App | Next.js 16 App Router, React 19, TypeScript |
+| UI | Tailwind CSS v4, Shadcn/UI, Radix UI |
+| Data | Prisma, PostgreSQL |
+| Auth | NextAuth v5 |
+| Runtime | Kubernetes, KubeBlocks PostgreSQL, ttyd, FileBrowser |
+| Integrations | GitHub App, sandbox-side commands, AI proxy |
+| Testing | Vitest, ESLint |
+
+## Repository Map
+
+```text
+app/                     Next.js routes, dashboard, auth, API endpoints
+components/              Shared UI and layout components
+lib/                     Application libraries and service code
+prisma/                  Database schema and migrations
+runtime/                 Runtime image and sandbox support files
+public/                  Static icons and assets
+```
+
+## Local Development
 
 ### Prerequisites
 
-- Node.js 22.12.0 or higher
+- Node.js 22.12.0 or later
+- pnpm 10.20.0
 - PostgreSQL database
 - Kubernetes cluster with KubeBlocks installed
-- GitHub OAuth application credentials
+- GitHub App and OAuth credentials for GitHub integration work
 
-### Environment Setup
+### Setup
 
-1. Clone the repository:
 ```bash
 git clone https://github.com/FullAgent/fulling.git
 cd fulling
-```
-
-2. Install dependencies:
-```bash
 pnpm install
-```
-
-3. Set up environment variables:
-
-Copy `.env.template` to `.env.local` and fill in your values:
-```bash
 cp .env.template .env.local
-```
-
-4. Initialize database:
-```bash
 npx prisma generate
 npx prisma db push
+pnpm dev
 ```
 
-5. Run the development server:
+Open [http://localhost:3000](http://localhost:3000).
+
+## Useful Commands
+
 ```bash
-pnpm run dev
+pnpm dev              # Start the development server
+pnpm build            # Generate Prisma client and build for production
+pnpm lint             # Run ESLint
+pnpm test             # Run Vitest
+pnpm test:watch       # Run Vitest in watch mode
+npx prisma generate   # Generate Prisma client
+npx prisma db push    # Push schema changes to the database
 ```
-
-Open [http://localhost:3000](http://localhost:3000) to access the application.
-
-### Database Schema
-
-See [Database Documentation](./docs/database.md) for schema details.
-
-## Deployment
-
-### Kubernetes Resources
-
-The platform creates the following Kubernetes resources for each project:
-
-1. **Database Cluster** (KubeBlocks):
-   - PostgreSQL 14.8.0
-   - 3Gi storage
-   - Auto-generated credentials
-
-2. **Sandbox StatefulSet**:
-   - Custom fullstack-web-runtime image
-   - Claude Code CLI pre-installed
-   - ttyd web terminal (port 7681)
-   - FileBrowser (port 8080)
-   - Application port (3000)
-
-3. **Services & Ingresses**:
-   - Internal service for pod networking
-   - HTTPS ingresses with SSL termination
-   - WebSocket support for terminal
-
-### Resource Limits
-
-Default resource allocation per sandbox:
-- CPU: 20m request, 2000m limit
-- Memory: 25Mi request, 4096Mi limit
-- Storage: 10Gi for sandbox, 3Gi for database
-
-## Development
-
-### Project Structure
-
-```
-fulling/
-├── app/                    # Next.js App Router pages
-│   ├── api/               # API routes
-│   ├── projects/          # Project management pages
-│   └── layout.tsx         # Root layout
-├── components/            # React components
-│   ├── ui/               # Shadcn/UI components
-│   └── terminal/         # Terminal components
-├── lib/                   # Core libraries
-│   ├── k8s/              # Kubernetes managers
-│   ├── events/           # Event system
-│   ├── jobs/             # Background jobs
-│   ├── repo/             # Repository layer
-│   └── services/         # Business services
-├── prisma/               # Database schema
-├── runtime/              # Docker image for sandboxes
-└── docs/                 # Documentation
-```
-
-### Key Services
-
-- **SandboxManager** (`lib/k8s/sandbox-manager.ts`) - StatefulSet operations
-- **DatabaseManager** (`lib/k8s/database-manager.ts`) - KubeBlocks operations
-- **Authentication** (`lib/auth.ts`) - Multi-provider OAuth
-- **Event Listeners** (`lib/events/`) - Lifecycle handlers
 
 ## Documentation
 
-- [Architecture](./docs/architecture.md) - Reconciliation pattern, event system
-- [Development Guide](./docs/development.md) - Local development
-- [Operations Manual](./docs/operations.md) - Deployment, monitoring
-- [Troubleshooting](./docs/troubleshooting.md) - Common issues
-
-## Security
-
-- **Authentication**: Multi-provider OAuth (GitHub, Password, Sealos)
-- **Isolation**: Each sandbox runs in user-specific Kubernetes namespace
-- **Terminal Auth**: HTTP Basic Auth with URL token injection
-- **Secrets Management**: Sensitive data stored in Kubernetes secrets
-- **Resource Limits**: Prevents resource exhaustion
-
-## Contributing
-
-See [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-### Development Setup
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests: `pnpm test`
-5. Submit a pull request
-
-## License
-
-MIT License - see [LICENSE](LICENSE).
-
-See [CHANGELOG.md](CHANGELOG.md) for release history.
-
-## Acknowledgments
-
-- [Anthropic](https://www.anthropic.com/) for Claude Code
-- [Sealos](https://sealos.io/) for Kubernetes platform
-- [ttyd](https://github.com/tsl0922/ttyd) for web terminal
-- [FileBrowser](https://github.com/filebrowser/filebrowser) for file management
-
-## Contact
-
-- GitHub: [@fanux](https://github.com/fanux)
-- Issues: [GitHub Issues](https://github.com/FullAgent/fulling/issues)
-
-## Star us for latest updates
-
-![star-demo](https://github.com/user-attachments/assets/bc497e0b-bd23-4ded-a231-1e382d56f92e)
-
----
-
-<div align="center">
-<strong>100% AI-generated code.</strong> Prompted by [@fanux](https://github.com/fanux).
-<br>Powered by Claude Code, with models from Anthropic (Sonnet, Opus), Google (Gemini), Zhipu AI (GLM), and Moonshot (Kimi).
-</div>
+- [AGENTS.md](./AGENTS.md) - agent guidance for this repository
+- [docs/architecture.md](./docs/architecture.md) - v3 system architecture
