@@ -55,9 +55,6 @@ Manual image publishing uses a single GHCR repository:
 ghcr.io/fullagent/fulling
 ```
 
-Use the lowercase repository name in commands. Brand-facing docs may display
-`ghcr.io/FullAgent/fulling`, but registry operations should use lowercase.
-
 For formal releases tagged `vX.Y.Z`, publish:
 
 ```text
@@ -70,6 +67,8 @@ For prereleases tagged `vX.Y.Z-alpha.N`, `vX.Y.Z-beta.N`, or `vX.Y.Z-rc.N`,
 publish:
 
 ```text
+ghcr.io/fullagent/fulling:vX.Y.Z-alpha.N
+ghcr.io/fullagent/fulling:vX.Y.Z-beta.N
 ghcr.io/fullagent/fulling:vX.Y.Z-rc.N
 ghcr.io/fullagent/fulling:sha-<short-sha>
 ```
