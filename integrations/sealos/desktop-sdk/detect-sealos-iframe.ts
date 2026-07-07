@@ -1,4 +1,6 @@
 type BrowserWindowLike = {
+  self?: unknown
+  top?: unknown
   location?: {
     ancestorOrigins?: ArrayLike<string>
   }
@@ -21,6 +23,8 @@ export function detectSealosIframe(browserWindow?: BrowserWindowLike): boolean {
   if (!browserWindow) return false
 
   try {
+    if (browserWindow.self === browserWindow.top) return false
+
     const ancestorOrigin = browserWindow.location?.ancestorOrigins?.[0]
     if (!ancestorOrigin) return false
 
