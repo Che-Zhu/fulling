@@ -1,18 +1,18 @@
 import type { Metadata } from 'next';
-import { Noto_Sans, Space_Grotesk } from 'next/font/google';
+import { IBM_Plex_Mono, Rubik } from 'next/font/google';
 
 import './globals.css';
 
-const spaceGrotesk = Space_Grotesk({
+const rubik = Rubik({
   subsets: ['latin'],
-  variable: '--font-heading',
-  weight: ['500', '600', '700'],
+  variable: '--font-rubik-variable',
+  weight: ['400', '500', '600'],
 });
 
-const notoSans = Noto_Sans({
+const ibmPlexMono = IBM_Plex_Mono({
   subsets: ['latin'],
-  variable: '--font-body',
-  weight: ['400', '500'],
+  variable: '--font-ibm-plex-mono',
+  weight: ['400', '500', '600'],
 });
 
 export const metadata: Metadata = {
@@ -27,7 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${spaceGrotesk.variable} ${notoSans.variable} bg-background antialiased`}>
+      <body
+        className={`${rubik.variable} ${ibmPlexMono.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
